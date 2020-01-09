@@ -1,0 +1,19 @@
+Download Packmol 
+  - http://m3g.iqm.unicamp.br/packmol/download.shtml
+  - To install unzip Tar file: tar -xvf yourfile.tar
+  - Open file in a terminal and type "make"
+  - This will install packmol into the computer
+  - Ensure all prerequisite programs are installed
+
+Creating systems
+  - Create file: [system].inp
+  - Setup:
+      - Distance tolerance: tolerance [distance]
+      - Output file: output [name].[filetype]
+      - Output filetype: filetype [filetype] (Can be pdb, tinker, xyz or moldy)
+  - Adding molecules
+      - All the .pdb files you call into the system should be in the same directory as the input file
+      - Call pdb file: structure [name].pdb
+      - How many of this .pdb do you want in the system: number [number]
+      - There are various ways to set distances and directions of molecules
+      - Set inside or outside of a shape: [inside/outside] [cube/box/sphere/ellipsoid]
