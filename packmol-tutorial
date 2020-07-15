@@ -27,4 +27,6 @@ Things to know when creating system
     the system until you get the system you are after.
   - Use "maxit 1" at the beginning of the packmol file to limit the attempts packmol will use to get a good system. This is good when you are using trial and error to get 
     a good system. Make sure to remove this when you have what you feel is a good system to ensure the best possible result.
+  - If you are making a membrane system, getting the straightest possible lipid to use for the pdb will make your life easier.
+  - Measure lipid length in VMD to properly line up the system for packmol
   
