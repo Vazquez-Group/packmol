@@ -8,7 +8,7 @@ Download Packmol
 Creating systems
   - Create file: [system].inp
   - Setup:
-      - Distance tolerance: tolerance [distance]
+      - Distance tolerance: tolerance [distance] (normally set to 2.0)
       - Output file: output [name].[filetype]
       - Output filetype: filetype [filetype] (Can be pdb, tinker, xyz or moldy)
   - Adding molecules
@@ -17,3 +17,10 @@ Creating systems
       - How many of this .pdb do you want in the system: number [number]
       - There are various ways to set distances and directions of molecules
       - Set inside or outside of a shape: [inside/outside] [cube/box/sphere/ellipsoid]
+      
+Things to know when creating system
+  - Packmol tries to follow your instructions about keeping things inside of a box and keeping the tolerance in check, but if the molecules you added do not fit inside of the box you specified at your set tolerance, packmol will prioritize the tolerance and begin to put things outside of the box but as close to it as possible.
+  - Packmol will always place all the molecules you have asked for at the tolerance you have set, even if that means disregarding your placement instructions. When this happens packmol outputs a message saying that it could not find a perfect solution but it atytempted to create a system as close to it as possible.
+  - To ensure that you get the best system possible, start with few molecules and more space then needed. Slowly increase the number of molecules and decrease the size of the system until you get the system you are after.
+  - Use "maxit 1" at the beginning of the packmol file to limit the attempts packmol will use to get a good system. This is good when you are using trial and error to get a good system. Make sure to remove this when you have what you feel is a good system to ensure the best possible result.
+  
